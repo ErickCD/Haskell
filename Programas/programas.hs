@@ -4,7 +4,7 @@ import Data.List
 --Serie de números de 1 - n
 ser1 ::Integer->Integer->String 
 ser1 a 0="" 
-ser1 a n=show(a)++" - "++ser1 (a+1) (n-1)
+ser1 a n = show(a)++" - "++ser1 (a+1) (n-1) ++" Valor de n-1 -> "++ show(n)
 ser ::Integer->String 
 ser n = (ser1 1 n)
 
