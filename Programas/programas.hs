@@ -8,6 +8,7 @@ ser1 a n = show(a)++" - "++ser1 (a+1) (n-1) ++" Valor de n-1 -> "++ show(n)
 ser ::Integer->String 
 ser n = (ser1 1 n)
 
+
 --Determina valor nulo
 par::Int->Bool
 par x = if mod x 2 == 0 then True else False

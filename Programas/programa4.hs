@@ -9,3 +9,20 @@
 5.- Función que determine si 4 números son diferentes.
 
  -}
+ 
+ --Programa1 media aritmética de 5 numeros
+med :: Fractional x => x -> x -> x -> x -> x -> x
+med g b c d e = (g + b + c + d + e)/5
+
+--Programa2 volumen de una esfera
+volumen :: Floating  x => x -> x
+volumen n = (3/4)* pi * n ^ 3
+	
+ --Programa3 obtiene el ultimo digito de un numero
+ultimodig :: Int -> Int
+ultimodig n = mod n 10
+ 
+ --Programa4 determina el maximo de 5 numeros
+maximo :: Ord v => v -> v -> v -> v -> v -> v
+maximo a b c d e = max a ( max b (max c ( max d e)))
+
