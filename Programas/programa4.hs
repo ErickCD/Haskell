@@ -12,8 +12,8 @@ import Data.List
  -}
  
  --Programa1 media aritmética de 5 numeros
-med :: Fractional x => x -> x -> x -> x -> x -> x
-med g b c d e = (g + b + c + d + e)/5
+med5 :: Fractional x => x -> x -> x -> x -> x -> x
+med5 g b c d e = (g + b + c + d + e)/5
 
 --Programa2 volumen de una esfera
 volumen :: Floating  x => x -> x
@@ -37,5 +37,5 @@ maximo a b c d e = max a ( max b (max c ( max d e)))
 
 --El maximo de numeros (terminar)
 maxim :: [Int] -> Int
-maxim [x:xs] = `max` [maxim xs]
+maxim [x:xs] = x `max` [maxim xs]
 
