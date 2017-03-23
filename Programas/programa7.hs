@@ -1,2 +1,2 @@
 numero :: [Integer] -> String
-numero [x] = print $ scanr (+) 0 x
+numero [x] = show(scanr (+) 0 x)
