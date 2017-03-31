@@ -1,4 +1,0 @@
-1.- Serie de numeros desde 1 hasta n
-2.- Función que determine si un numero entero es par
-3.- Función de mayusulas a minusculas
-4.- Función que convierta de minusculas a mayusculas
