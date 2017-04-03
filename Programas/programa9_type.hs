@@ -33,7 +33,8 @@ type Apellido2 = String
 type Edad = Integer
 
 --Forma uno para definir un constructor
-{-data Persona = UnaPersona Nombre Apellido1 Apellido2 Edad deriving Show
+{-
+data Persona = UnaPersona Nombre Apellido1 Apellido2 Edad deriving Show
 
 alexis :: Persona
 alexis = UnaPersona "Alexis" "Elizalde" "Mendoza" 21
@@ -56,13 +57,29 @@ jacky = UnaPersona{
 					}
 {-
 Implemente una función que permita determinar si un día está congelado
-trabajando bajo dos escalas (°C y °F). Para el caso de grados Centigrados
-o grados celcius, considere que el día estará congelado, si el grado 
+trabajando bajo dos escalas (°C y °F). Para el caso de °C, considere que 
+el día estará congelado, si el grado 
 ingresado, es menor o igual a cero. Para el caso de °F considere que
 será un dia congelado si el grado o grados será menor a 32°. Utilice
 comparación de patrones, la palabra en Data y operadores relacionales.
 -}
 
-data centigrados = 
+--type Medida = String
+type Cantidad = Int 
+data Grados = Centigrados Cantidad | Fahrenheit Cantidad deriving Show
+
+unMed :: Grados
+unMed = Fahrenheit 32
+--unMed = Centigrados "Centigrados" 0
+
+prueba1 :: Grados ->  String
+prueba1 (Fahrenheit val) = congelado 1 val
+prueba1 (Centigrados val) = congelado 2 val
+
+congelado :: Int -> Int -> String
+congelado 1 x = if (x <= 32) then "Dia congelado." else "Dia no congelado."
+congelado 2 x = if (x <= 0) then "Dia congelado." else "Dia no congelado."
 
 -- Instalación de GTK+ siguiente clase.
+
+--Power by: Erick Clair

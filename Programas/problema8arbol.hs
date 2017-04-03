@@ -47,22 +47,18 @@ numeroHojas Hoja = 1
 numeroHojas (Nodo raiz izq der) = numeroHojas izq + numeroHojas der
 
 --Sumar todos los datos del árbol
-sumDatosArbol ::  Arbol a -> [a]
-sumDatosArbol Hoja = []
-sumDatosArbol (Nodo raiz izq der) = raiz: (sumDatosArbol izq ++ sumDatosArbol der)
-
-sumaDatosArbol = sum (sumDatosArbol arbol)
+sumaDatosArbol = sum (recorridoInOrden arbol)
 					
 -- Implementar una función para calcular el número de nodos que tiene el árbol A
 
 {-
 -Definir/crear las funciones:
-	Recorrido en preorden
-	Recorrido en posorden
-	Recorrido en inorden
-	Nivel del árbol
+	Recorrido en preorden~
+	Recorrido en posorden~
+	Recorrido en inorden~
+	Nivel del árbol ~
 	------------------------------------
-	Número de nodos del árbol
+	Número de nodos del árbol ~
 	La profundidad del árbol binario
 	Número de hojas
 	Comprobar si un dato pertenece al árbol binario
